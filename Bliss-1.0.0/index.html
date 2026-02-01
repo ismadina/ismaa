@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Jasa Pembuatan Aplikasi Sederhana</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#fff5f8;color:#333;line-height:1.6;scroll-behavior:smooth;}
+
+header{background:#f8b4c6;position:sticky;top:0;z-index:100;}
+nav{width:90%;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:15px 0;flex-wrap:wrap;}
+.logo{display:flex;align-items:center;gap:10px;color:#fff;font-weight:700;font-size:20px;}
+.logo span{background:#fff;color:#f06292;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;}
+nav ul{list-style:none;display:flex;gap:18px;}
+nav ul li a{color:#fff;text-decoration:none;font-size:14px;font-weight:500;}
+
+.hero{background:linear-gradient(135deg,#fbc2d9,#f8b4c6);color:#fff;padding:90px 8%;}
+.hero h1{font-size:38px;margin-bottom:15px;}
+.hero p{max-width:600px;margin-bottom:25px;font-size:15px;}
+.btn{background:#fff;color:#f06292;padding:12px 32px;border-radius:30px;text-decoration:none;font-weight:600;font-size:14px;}
+
+section{padding:70px 8%;}
+section h2{text-align:center;margin-bottom:25px;font-size:28px;color:#f06292;}
+
+.about p{max-width:900px;margin:auto;text-align:center;font-size:15px;}
+.swot{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;margin-top:40px;}
+.swot-box{background:#fff;padding:25px;border-radius:18px;box-shadow:0 10px 25px rgba(0,0,0,.08);}
+
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;margin-top:35px;}
+.service-card{background:#fff;padding:28px 22px;border-radius:20px;text-align:center;box-shadow:0 12px 30px rgba(0,0,0,.1);}
+.service-card h3{color:#f06292;margin-bottom:8px;}
+
+/* ===== VISI MISI ===== */
+.visimisi{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+margin-top:40px;
+}
+.vm-card{
+background:#fff;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+.vm-card h3{
+color:#f06292;
+margin-bottom:12px;
+text-align:center;
+}
+.vm-card ul{
+padding-left:18px;
+font-size:14px;
+}
+.vm-card ul li{margin-bottom:8px;}
+
+.cta{background:linear-gradient(135deg,#f8b4c6,#fbc2d9);color:#fff;text-align:center;padding:70px 8%;}
+.contact-form{max-width:500px;margin:40px auto 0;background:#fff;padding:25px;border-radius:20px;box-shadow:0 10px 25px rgba(0,0,0,.1);}
+.contact-form input,.contact-form select,.contact-form button{width:100%;padding:12px;margin-bottom:15px;border-radius:12px;border:1px solid #ddd;}
+.contact-form button{background:#f06292;color:#fff;border:none;font-weight:600;cursor:pointer;}
+
+footer{background:#f06292;color:#fff;text-align:center;padding:22px 8%;font-size:13px;}
+
+.animate{opacity:0;transform:translateY(40px);transition:.8s;}
+.animate.show{opacity:1;transform:translateY(0);}
+
+/* ===== POPUP ===== */
+.popup{
+position:fixed;
+top:0;left:0;
+width:100%;height:100%;
+background:rgba(0,0,0,.4);
+display:flex;
+align-items:center;
+justify-content:center;
+opacity:0;
+visibility:hidden;
+transition:.4s;
+z-index:999;
+}
+.popup.show{opacity:1;visibility:visible;}
+.popup-box{
+background:#fff;
+padding:35px;
+border-radius:20px;
+text-align:center;
+animation:zoom .4s ease;
+}
+.popup-box h3{color:#f06292;margin-bottom:10px;}
+@keyframes zoom{
+from{transform:scale(.6);}
+to{transform:scale(1);}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+<div class="logo"><span>AS</span>Aplikasi Sederhana</div>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#visimisi">Visi & Misi</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<section class="hero animate" id="home">
+<h1>Jasa Pembuatan Aplikasi Sederhana</h1>
+<p>Kami menyediakan layanan pembuatan aplikasi sederhana untuk UMKM, sekolah, dan usaha kecil.</p>
+<a href="#contact" class="btn">Hubungi Kami</a>
+</section>
+
+<section class="about" id="about">
+<h2 class="animate">Tentang Usaha Kami</h2>
+<p class="animate">
+Jasa Pembuatan Aplikasi Sederhana adalah usaha di bidang digital yang menyediakan aplikasi dengan fitur dasar sesuai kebutuhan pengguna.
+</p>
+
+<div class="swot">
+<div class="swot-box animate"><h3>Strength</h3><p>Modal kecil dan dapat dikerjakan secara freelance.</p></div>
+<div class="swot-box animate"><h3>Weakness</h3><p>Fitur terbatas dan bergantung kemampuan pengembang.</p></div>
+<div class="swot-box animate"><h3>Opportunity</h3><p>Banyak UMKM & sekolah membutuhkan aplikasi sederhana.</p></div>
+<div class="swot-box animate"><h3>Threat</h3><p>Persaingan developer dan aplikasi gratis serupa.</p></div>
+</div>
+</section>
+
+<section id="services">
+<h2 class="animate">Layanan Kami</h2>
+<div class="services">
+<div class="service-card animate"><h3>Aplikasi UMKM</h3><p>Aplikasi kasir dan laporan penjualan.</p></div>
+<div class="service-card animate"><h3>Aplikasi Sekolah</h3><p>Aplikasi absensi dan data siswa.</p></div>
+<div class="service-card animate"><h3>Aplikasi Custom</h3><p>Sesuai kebutuhan klien.</p></div>
+<div class="service-card animate"><h3>Maintenance</h3><p>Perawatan dan pengembangan fitur.</p></div>
+</div>
+</section>
+
+<!-- VISI & MISI -->
+<section id="visimisi">
+<h2 class="animate">Visi & Misi</h2>
+<div class="visimisi">
+<div class="vm-card animate">
+<h3>Visi</h3>
+<p>
+Menjadi penyedia jasa pembuatan aplikasi sederhana yang kreatif, terjangkau,
+dan bermanfaat bagi UMKM, sekolah, dan masyarakat.
+</p>
+</div>
+
+<div class="vm-card animate">
+<h3>Misi</h3>
+<ul>
+<li>Menyediakan aplikasi sederhana sesuai kebutuhan pengguna.</li>
+<li>Memberikan pelayanan yang cepat dan ramah.</li>
+<li>Mengembangkan solusi digital yang mudah digunakan.</li>
+<li>Mendukung transformasi digital UMKM dan pendidikan.</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section class="cta" id="contact">
+<h2>Punya Ide Aplikasi?</h2>
+<div class="contact-form">
+<input type="text" id="nama" placeholder="Nama Anda">
+<input type="tel" id="hp" placeholder="Nomor HP">
+<select id="pesanan">
+<option value="">Pilih Pesanan</option>
+<option>Aplikasi UMKM</option>
+<option>Aplikasi Sekolah</option>
+<option>Aplikasi Custom</option>
+<option>Maintenance</option>
+</select>
+<button onclick="kirimKeHP()">Pesan Sekarang</button>
+</div>
+</section>
+
+<footer>
+<p>© 2026 | Jasa Pembuatan Aplikasi Sederhana<br>
+Nama: Ismadina Aulia | Kelas: XI RPL | Absen: 12</p>
+</footer>
+
+<!-- POPUP -->
+<div class="popup" id="popup">
+<div class="popup-box">
+<h3>Pesanan Anda Berhasil!</h3>
+<p>Terima kasih telah melakukan pemesanan.</p>
+</div>
+</div>
+
+<script>
+const observer=new IntersectionObserver(e=>{
+e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('show')});
+},{threshold:0.2});
+document.querySelectorAll('.animate').forEach(el=>observer.observe(el));
+
+function kirimKeHP(){
+const nama=document.getElementById('nama').value;
+const hp=document.getElementById('hp').value;
+const pesanan=document.getElementById('pesanan').value;
+
+if(!nama||!hp||!pesanan){
+alert('Mohon lengkapi semua data');
+return;
+}
+
+document.getElementById('popup').classList.add('show');
+setTimeout(()=>{document.getElementById('popup').classList.remove('show');},3000);
+
+document.getElementById('nama').value='';
+document.getElementById('hp').value='';
+document.getElementById('pesanan').value='';
+}
+</script>
+
+</body>
+</html>
